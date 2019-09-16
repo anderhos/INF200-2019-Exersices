@@ -1,7 +1,7 @@
 INF200 Exersices:
 =================
 
-Helge Helø Klemetsdal:
+Helge Helo Klemetsdal:
 ----------------------
 
 This repository contains all the exersices written as part of the
