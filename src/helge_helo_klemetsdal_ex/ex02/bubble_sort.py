@@ -5,14 +5,14 @@ __email__ = 'hegkleme@nmbu.no'
 
 
 def bubble_sort(somedata):
-    datalist = list(somedata)
-    data_length = len(datalist)
+    dat = list(somedata)
+    data_length = len(dat)
     while data_length > 1:
         for index in range(data_length - 1):
-            if datalist[index] > datalist[index + 1]:
-                datalist[index], datalist[index + 1] = datalist[index + 1], datalist[index]
+            if dat[index] > dat[index + 1]:
+                dat[index], dat[index + 1] = dat[index + 1], dat[index]
         data_length -= 1
-    return datalist
+    return dat
 
 
 if __name__ == "__main__":
