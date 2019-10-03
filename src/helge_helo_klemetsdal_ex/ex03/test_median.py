@@ -63,10 +63,11 @@ def test_empty_gives_error():
 
 def test_if_data_unchanged():
     data = [1, 2, 3, 4]
-    some_median = median(data)
+    median(data)
     assert data == [1, 2, 3, 4]
 
 
 def test_works_for_tuples():
     some_tuple = (1, 2, 3, 4)
     assert median(some_tuple) == 2.5
+
