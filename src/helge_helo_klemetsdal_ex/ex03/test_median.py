@@ -45,3 +45,8 @@ def test_ordered_elements():
     ord_list = [1,2,3,4,5]
     assert median(ord_list) == 3
 
+
+def test_rev_ordered_elements():
+    rev_list = [5,4,3,2,1,0]
+    assert median(rev_list) == 2.5
+
