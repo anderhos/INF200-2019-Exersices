@@ -60,3 +60,8 @@ def test_empty_gives_error():
     with pytest.raises(ValueError):
         median([])
 
+
+def test_if_data_unchanged():
+    data = [1,2,3,4]
+    median == median(data)
+    assert data == [1,2,3,4]
