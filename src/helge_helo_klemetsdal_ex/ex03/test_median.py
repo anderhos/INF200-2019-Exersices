@@ -35,3 +35,8 @@ def test_list_of_odd_elements():
     odd_list = [1,1,1]
     assert median(odd_list) == 1
 
+
+def test_list_of_even_elements():
+    even_list = [1,1,1,2]
+    assert median(even_list) == 1
+
