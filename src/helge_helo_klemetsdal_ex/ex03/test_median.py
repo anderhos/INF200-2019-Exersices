@@ -55,3 +55,8 @@ def test_un_ordered_elements():
     unord_list = [3,20,1,3]
     assert median(unord_list) == 3
 
+
+def test_empty_gives_error():
+    with pytest.raises(ValueError):
+        median([])
+
