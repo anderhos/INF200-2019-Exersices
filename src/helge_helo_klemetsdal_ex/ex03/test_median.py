@@ -23,7 +23,7 @@ def median(data):
     else:
         return (sort_data[num_el // 2 - 1] + sort_data[num_el // 2]) / 2
 # Code found from
-# https://github.com/yngvem/INF200-2019-Exercises/blob/master/exersices/ex03.rst
+# https://github.com/yngvem/INF200-2019-Exercises repo in ex03.rst
 
 
 def test_list_of_one_element():
@@ -32,27 +32,27 @@ def test_list_of_one_element():
 
 
 def test_list_of_odd_elements():
-    odd_list = [1,1,1]
+    odd_list = [1, 1, 1]
     assert median(odd_list) == 1
 
 
 def test_list_of_even_elements():
-    even_list = [1,1,1,2]
+    even_list = [1, 1, 1, 2]
     assert median(even_list) == 1
 
 
 def test_ordered_elements():
-    ord_list = [1,2,3,4,5]
+    ord_list = [1, 2, 3, 4, 5]
     assert median(ord_list) == 3
 
 
 def test_rev_ordered_elements():
-    rev_list = [5,4,3,2,1,0]
+    rev_list = [5, 4, 3, 2, 1, 0]
     assert median(rev_list) == 2.5
 
 
 def test_un_ordered_elements():
-    unord_list = [3,20,1,3]
+    unord_list = [3, 20, 1, 3]
     assert median(unord_list) == 3
 
 
@@ -62,11 +62,11 @@ def test_empty_gives_error():
 
 
 def test_if_data_unchanged():
-    data = [1,2,3,4]
-    median == median(data)
-    assert data == [1,2,3,4]
+    data = [1, 2, 3, 4]
+    some_median = median(data)
+    assert data == [1, 2, 3, 4]
 
 
 def test_works_for_tuples():
-    some_tuple = (1,2,3,4)
+    some_tuple = (1, 2, 3, 4)
     assert median(some_tuple) == 2.5
