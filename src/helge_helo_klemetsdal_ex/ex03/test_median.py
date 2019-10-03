@@ -26,4 +26,8 @@ def median(data):
 # https://github.com/yngvem/INF200-2019-Exercises/blob/master/exersices/ex03.rst
 
 
+def test_list_of_one_element():
+    list1 = [1]
+    assert median(list1) == 1
+
 
