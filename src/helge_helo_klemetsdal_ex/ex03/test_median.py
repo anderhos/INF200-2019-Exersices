@@ -50,3 +50,8 @@ def test_rev_ordered_elements():
     rev_list = [5,4,3,2,1,0]
     assert median(rev_list) == 2.5
 
+
+def test_un_ordered_elements():
+    unord_list = [3,20,1,3]
+    assert median(unord_list) == 3
+
