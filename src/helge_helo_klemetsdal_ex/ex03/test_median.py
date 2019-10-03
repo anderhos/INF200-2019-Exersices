@@ -22,3 +22,8 @@ def median(data):
         return sort_data[num_el // 2]
     else:
         return (sort_data[num_el // 2 - 1] + sort_data[num_el // 2]) / 2
+# Code found from
+# https://github.com/yngvem/INF200-2019-Exercises/blob/master/exersices/ex03.rst
+
+
+
