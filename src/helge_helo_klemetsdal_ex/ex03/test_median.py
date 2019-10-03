@@ -40,3 +40,8 @@ def test_list_of_even_elements():
     even_list = [1,1,1,2]
     assert median(even_list) == 1
 
+
+def test_ordered_elements():
+    ord_list = [1,2,3,4,5]
+    assert median(ord_list) == 3
+
