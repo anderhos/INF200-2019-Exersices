@@ -23,7 +23,7 @@ def median(data):
     else:
         return (sort_data[num_el // 2 - 1] + sort_data[num_el // 2]) / 2
 # Code found from
-# https://github.com/yngvem/INF200-2019-Exercises repo in ex03.rst
+# https://github.com/yngvem/INF200-2019-Exercises repo in ex03_project.rst
 
 
 def test_list_of_one_element():
@@ -70,4 +70,3 @@ def test_if_data_unchanged():
 def test_works_for_tuples():
     some_tuple = (1, 2, 3, 4)
     assert median(some_tuple) == 2.5
-
