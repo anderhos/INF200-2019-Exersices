@@ -6,6 +6,7 @@ __email__ = 'hegkleme@nmbu.no' 'anderhos@nmbu.no'
 import random as rd
 import numpy as np
 
+
 def single_game(num_players):
     """
     Returns duration of single game.
@@ -25,20 +26,21 @@ def single_game(num_players):
     """
 
     winning_score = 90
-    moves_list = []
     ladder_dict = {1: 40, 8: 10, 36: 52, 43: 62, 49: 79, 65: 82, 68: 85}
     snake_dict = {24: 5, 33: 3, 42: 30, 56: 37, 64: 27, 74: 12, 87: 70}
-    for player in range(num_players):
-        num_moves = 0
-        player_score = 0
-        while player_score <= winning_score:
-            player_score += rd.randint(1, 6)
-            if player_score in ladder_dict.keys():
-                player_score = ladder_dict[player_score]
-            if player_score in snake_dict.keys():
-                player_score = snake_dict[player_score]
-            num_moves += 1
-        moves_list.append(num_moves)
+
+    scorelist = [0 for _ in range(num_players)]
+    moves_list = [0 for _ in range(num_players)]
+
+    while max(scorelist) < winning_score:
+        for index, player_position in enumerate(scorelist):
+            player_position += rd.randint(1, 6)
+            if player_position in ladder_dict.keys():
+                player_position = ladder_dict[player_position]
+            if player_position in snake_dict.keys():
+                player_position = snake_dict[player_position]
+            scorelist[index] = player_position
+            moves_list[index] += 1
 
     winning_moves = min(moves_list)
     return winning_moves
@@ -96,5 +98,3 @@ if __name__ == "__main__":
     longest_game = max(winning_list)
     median_game = np.median(winning_list)
     mean_game = np.mean(winning_list)
-
-
