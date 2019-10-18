@@ -29,17 +29,17 @@ def single_game(num_players):
     ladder_dict = {1: 40, 8: 10, 36: 52, 43: 62, 49: 79, 65: 82, 68: 85}
     snake_dict = {24: 5, 33: 3, 42: 30, 56: 37, 64: 27, 74: 12, 87: 70}
 
-    scorelist = [0 for _ in range(num_players)]
+    position_list = [0 for _ in range(num_players)]
     moves_list = [0 for _ in range(num_players)]
 
-    while max(scorelist) < winning_score:
-        for index, player_position in enumerate(scorelist):
+    while max(position_list) < winning_score:
+        for index, player_position in enumerate(position_list):
             player_position += rd.randint(1, 6)
             if player_position in ladder_dict.keys():
                 player_position = ladder_dict[player_position]
             if player_position in snake_dict.keys():
                 player_position = snake_dict[player_position]
-            scorelist[index] = player_position
+            position_list[index] = player_position
             moves_list[index] += 1
 
     winning_moves = min(moves_list)
