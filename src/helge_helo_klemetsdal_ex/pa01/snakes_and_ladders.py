@@ -95,6 +95,10 @@ def multi_game_experiment(num_games, num_players, seed):
 if __name__ == "__main__":
     winning_list = multi_game_experiment(100, 4, 1)
     shortest_game = min(winning_list)
+    print("The shortest game duration is " + str(shortest_game) + " moves.")
     longest_game = max(winning_list)
+    print("The longest game duration is " + str(longest_game) + " moves.")
     median_game = np.median(winning_list)
+    print("The median game duration is " + str(median_game) + " moves.")
     mean_game = np.mean(winning_list)
+    print("The mean game duration is " + str(mean_game) + " moves.")
